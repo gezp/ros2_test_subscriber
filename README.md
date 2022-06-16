@@ -8,7 +8,7 @@ create and destruct subscriber at runtime.
 ros2 launch ros2_test_subscriber test_subscriber.launch.py use_dedicated_thread:=False
 ```
 
-actual output 
+normal case actual output 
 ```
 [test_subscriber-1] [INFO] [1655367815.984070995] [task_server]: activate
 [test_subscriber-1] [INFO] [1655367815.984688260] [task_client]: client success
@@ -34,7 +34,7 @@ actual output
 ros2 launch ros2_test_subscriber test_subscriber.launch.py use_dedicated_thread:=True
 ```
 
-actual output (ubuntu22.04 ROS Rolling)
+actual output under ubuntu22.04 ROS Rolling binnary
 ```
 [INFO] [test_subscriber-1]: process started with pid [1366]
 [test_subscriber-1] [INFO] [1655367910.706412298] [task_server]: activate
@@ -48,3 +48,6 @@ actual output (ubuntu22.04 ROS Rolling)
 [test_subscriber-1] [INFO] [1655367922.708833489] [task_server]: activate
 [test_subscriber-1] [INFO] [1655367922.709321480] [task_client]: client success
 ```
+
+actual output under ubuntu20.04 ROS Galactic binnary
+* it's as same as normal case actual output 
